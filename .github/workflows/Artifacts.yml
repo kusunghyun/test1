@@ -1,13 +1,12 @@
 on: workflow_dispatch
+env:
+   OUTPUT_FILE: output.log
+   OUTPUT_NAME: output-log-file
 jobs:
-  env:
-    OUTPUT_FILE: output.log
-    OUTPUT_NAME: output-log-file
   upload-job:
     name: Save output
     runs-on: ubuntu-latest
     steps:
-      
      - shell: bash
        run: expr 1 +1 > $OUTPUT_FILE
      - name: Upload output file
