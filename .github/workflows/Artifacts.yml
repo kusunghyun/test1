@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - shell: bash
-       run: expr 1 +1 > $OUTPUT_FILE
+       run: expr 1 + 1 > $OUTPUT_FILE
      - name: Upload output file
        uses: actions/upload-artifact@v4
        with:
